@@ -47,4 +47,11 @@ public class Department {
     public void setMembers(List<Person> members) {
         this.members = members;
     }
+
+    public void copyFrom(Department d) {
+        this.ID = d.ID;
+        this.name = d.name;
+        this.head = d.head;
+        this.members = d.members;
+    }
 }

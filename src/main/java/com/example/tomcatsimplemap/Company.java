@@ -47,4 +47,16 @@ public class Company {
         p.setID(id);
         persons.add(p);
     }
+
+    public List<Department> getAllDepartments() {
+        return departments; //2.0
+    }
+    public Department getDepartmentById(int id) {
+        for (Department d : departments) {
+            if(d.getID() == id) {
+                return d;
+            }
+        }
+        return null;
+    }
 }
