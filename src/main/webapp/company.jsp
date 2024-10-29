@@ -25,6 +25,7 @@
     }
 %>
     <table>
+        <caption>Spis jednostek:</caption>
         <%
             if (departments.isEmpty()) {
                 out.println("<tr><td>Brak departamentów do wyświetlenia.</td></tr>");
@@ -34,7 +35,7 @@
         %>
             <tr>
                 <td>
-                    Nazwa jednostki: ${department.name};
+                    <a href="department.jsp?id=${department.ID}">${department.name}</a>  <!-- tutaj biorep o prostu ID bo to w jsp oznacza wywołanie gettera-->
                 </td>
             </tr>
         <%
